@@ -12,6 +12,13 @@ class Settings(BaseSettings):
     # Mock settings
     USE_MOCK: bool = True
     MOCK_DB_PATH: str = "data/mock/db2_mock.db"
+
+    # Watsonx settings (Required from .env/environment)
+    WATSONX_API_KEY: str
+    WATSONX_PROJECT_ID: str
+    WATSONX_URL: str
+    WATSONX_MODEL_ID: str = "ibm/granite-3-8b-instruct"
+
     
     class Config:
         env_file = ".env"
